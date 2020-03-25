@@ -1,0 +1,44 @@
+Anotações extras
+Site notion.so: Realizar Anotações
+
+Comando npx: quase igual ao npm, mas ele não instala o pacote. Ao invés disso, ele executa o pacote externo sem a necessidade de instalar de forma global no projeto.
+Exemplo: npx create-react-app nome-pasta (Cria a aplicação react básica, sem instalar o pacote de create-react-app)
+
+-------------------------------------///-------------------------------------
+NodeJS
+express: Mini-Framework para cuidar de rotas e os parâmetros dela
+
+-------------------------------------///-------------------------------------
+Frontend
+Abordagem tradicional:
+-> chega uma requisição no backend e retorna todo o conteúdo
+-> Limita a aplicação, pois um app mobile não pode ler, nem ser usado por um serviço externo.
+-> Servidor tem toda a responsabilidade de carregar o conteúdo para o browser.
+
+Abordagem SPA:
+-> Página não carrega
+-> Traz apenas os dados serem preenchidos na tela
+-> É possível criar quantos frontends quiser
+-> React, Vue e Angular
+
+-------------------------------------///-------------------------------------
+Mobile
+Abordagem tradicional:
+-> iOS: Object-C ou Swift para gerar o .ipa (executável)
+-> Android: Java ou Kotlin para gerar o .apk (executável)
+-> É preciso criar duas aplicações, ruim para fazer alterações depois
+
+Abordagem React Native:
+-> Ele gera o .apk ou .ipa
+-> Todo o código é feito em JS
+-> Não converte para código nativo (evitando alguns problemas)
+-> O dispositivo entende os códigos em JS e gera interface totalmente nativa
+
+Mas o React Native não cuida das funcionalidades nativas do aparelho, como API de câmera, mapas ou geolocalização. 
+Em teoria, seria preciso do Android Studio e xcode para poder acessar essas funcionalidades nativas e gerar o sdk ou ipa. Problema é que essas instalações podem ser perigosas, já que não são simples de serem instalados e tão livres de erros.
+
+-------------------------------------///-------------------------------------
+Expo
+Expo é um aplicativo que pode ser instalado na Play Store. Tudo já instalado, API de mapas, geolocalização, câmera, sensores, calendário.
+
+Com o expo, só se preocupa em desenvolver com react native, não geramos o executável, o expo cuida em gerar esse executável para Android e iOS.
