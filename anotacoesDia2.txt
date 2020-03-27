@@ -1,0 +1,60 @@
+Anotações extras
+Rota: localhost:3333/user 
+O recurso da rota: /user
+
+Status: 401 - não autorizado
+Status 204 - resposta que deu certo mas nao tem conteudo nenhum para retornar
+
+-------------------------------------///-------------------------------------
+Métodos http para dar mais semântica
+GET: Buscar informação do back-end
+POST: Criar uma informação back-end
+PUT:  Alterar uma informação no back-end
+DELETE: Deletar uma informação no back-end
+
+-------------------------------------///-------------------------------------
+Tipos de parâmetros:
+Query Params: 
+-> Parâmetros nomeado enviados na rota, após o “?” (serve para filtros, paginação). 
+-> Exemplo: localhost:3333/users?name=Diego
+-> Acesso: request.query
+
+Route Params: 
+-> Parâmetros utilizados para identificar recursos, se o recurso é usuário, busca um único usuário por exemplo.
+-> Exemplo: localhost:3333/users/1
+-> Acesso: request.params
+
+Request Body: 
+-> Utilizado para os outros tipos de necessidade. Corpo da requisição, utilizado para criar ou alterar recursos.
+-> Acesso: request.body
+
+-------------------------------------///-------------------------------------
+Nodemon
+Biblioteca que serve para não ficar reiniciando servidor toda hora.
+npm install nodemon -D
+O -D instala a biblioteca apenas em desenvolvimento, não instalar essa biblioteca quando estiver em produção.
+
+-------------------------------------///-------------------------------------
+Banco de dados
+SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+NoSQL: MongoDB, CouchDB (pouco estruturado, mais livre as tabelas)
+
+-------------------------------------///-------------------------------------
+Comunicação com o banco de dados
+Driver: SELECT * FROM users
+Query Builder: table(‘users’).select(‘*’).where() -> KNEX SQL Query Builder for JS http://knexjs.org/
+
+Instalação: 
+-> Entrar no site e procurar na parte de Node.JS 
+-> npm install knex --save
+-> Escolher qual o banco que vai ser utilizado. Exemplo: npm install sqlite3 --save.
+-> Depois, npx knex init
+-> Para criar uma migração: npx knex migrate:make “nome da migrate”
+-> Executar a migrare npx migrate:latest
+-> npx knex migrate:rollback : desfaz a última migrate que foi executada
+-> npx knex migrate:status : migrate que ja foi executadas
+
+-------------------------------------///-------------------------------------
+Migrate
+-> Método up, o q vai acontecer quando eu executar esse migrate,
+-> Método down, se der algum problema e for preciso voltar atras? o q fazer (Deletar a tabela por exemplo)
