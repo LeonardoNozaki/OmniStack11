@@ -1,0 +1,34 @@
+Conceitos do React: Componentes, JSX (JavaScript XML), Propriedades, Estados, Imutabilidade (Criar outro, além de alterar a variável já existente)
+
+-------------------------------------///-------------------------------------
+Imagem em SVG é vetorial, é mais fácil para reduzir ou aumentar
+
+-------------------------------------///-------------------------------------
+CSS:
+box-sizing: border-box -> faz com o que o padding dos elementos seja anexado a largura e altura e não somados. 
+
+-> Exemplo: definir uma div com width: 300px; padding: 0 50px;
+-> Sem border-box a largura final da div seria 400px
+-> Com border-box a largura final da div seria 300px com o padding interno
+
+Definindo duas colunas com grid
+-> display: grid;
+-> grid-template-columns: 1fr 1fr
+-> ou grid-template-columns: repeat(2, 1fr)
+
+.class p + input
+-> Aplicar o css no input que tem uma tag p antes (nao vai aplicar no primeiro input)
+-------------------------------------///-------------------------------------
+Routes:
+-> Switch garante que apenas uma rota vai ser chamada por momento
+
+-------------------------------------///-------------------------------------
+Icons
+-> npm install react-icons (pacotes com um grande número de ícones)
+
+Uso:
+-> import { FiArrowLeft } from 'react-icons/fi';
+
+/fi - feather icons
+/md - material icons
+/fa - font awesome
