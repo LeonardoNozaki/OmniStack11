@@ -6,6 +6,9 @@ Status: 401 - não autorizado
 Status 204 - resposta que deu certo mas nao tem conteudo nenhum para retornar
 
 -------------------------------------///-------------------------------------
+O que é o Node.js: Uma plataforma escrita em cima do motor V8 do Google Chrome
+
+-------------------------------------///-------------------------------------
 Métodos http para dar mais semântica
 GET: Buscar informação do back-end
 POST: Criar uma informação back-end
@@ -58,3 +61,18 @@ Instalação:
 Migrate
 -> Método up, o q vai acontecer quando eu executar esse migrate,
 -> Método down, se der algum problema e for preciso voltar atras? o q fazer (Deletar a tabela por exemplo)
+
+Para que servem as migrations no back-end? 
+-> Para controle de versão do banco de dados
+-> Para facilitar o trabalho de mais devs no projeto, mantendo a base de dados sempre atualizada
+
+-------------------------------------///-------------------------------------
+Como podemos definir as Entidades no back-end?
+A representação de uma tabela do banco de dados, algo que será mantido pela aplicação
+
+-------------------------------------///-------------------------------------
+Web Services
+-> O objetivo dos Web Services é a comunicação de aplicações através da Internet.
+-> Web Service é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes.
+-> Os Web Services são componentes que permitem às aplicações enviar e receber dados. 
+-> Cada aplicação pode ter a sua própria "linguagem", que é traduzida para uma linguagem universal, um formato intermediário como XML, JSON, CSV, etc.

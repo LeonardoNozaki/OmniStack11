@@ -1,4 +1,5 @@
 Conceitos do React: Componentes, JSX (JavaScript XML), Propriedades, Estados, Imutabilidade (Criar outro, além de alterar a variável já existente)
+Imutabilidade : Segundo este conceito, não podemos manipular o valor de um estado de uma forma direta. Podemos apenas sobrepor o valor da variável do estado
 
 -------------------------------------///-------------------------------------
 Imagem em SVG é vetorial, é mais fácil para reduzir ou aumentar
