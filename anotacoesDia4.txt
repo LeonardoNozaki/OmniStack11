@@ -1,0 +1,59 @@
+Diferenças entre Web/React e Mobile/React Native
+-> Na web: <div> <span> <p> <h1> <header> <footer> (diversas tags, cada uma com uma semântica diferente e mais bem definida.
+-> No React Native tem tags diferentes: <View>(qualquer tipo de container) <Text> (Qualquer tipo de texto). Logo, no React Native têm menos tags e elas são mais genéricas, com semântica menos definida.
+
+-> No React Native nao tem class/classname nem id
+-> Sempre se passa a estilização na propriedade style do componente que recebe um objeto (StyleSheet) com a estilização ou um objeto inline
+
+-> Todos os elementos do React Native sao display flex (flex box), nao tem display block ou inline block
+-> flex: 1 = ocupar tela toda
+-> Não tem “padding: 20”, é “paddingHorizontal: 20” ou “paddingVertical: 20”
+-> Tem paddingTop...
+
+-> No StyleSheet não tem traço nos nomes das propriedades de css: “alignItems”
+-> Todos os valores que não são numéricos devem ir entre aspas simples
+-> Não tem herança de estilos, cada componente precisa ter a sua estilização própria
+
+-------------------------------------///-------------------------------------
+Expo
+Expo é uma ferramenta que nos permite desenvolver para React Native sem instalar recursos nativos do Android e iOS
+Com o Expo, nós instalamos um aplicativo no celular chamado Expo, e dentro dele, tudo o que precisamos para desenvolver no React Native já está instalado
+
+-> npm install -g expo-cli
+-> A flag “-g” é instalação global, permite usar o expo em diversos projetos sem instalar em cada um
+
+-> expo init <nome_pasta> 
+-> entra na pasta e utiliza yarn start
+-> abre o celular e faz a leitura do qr code que aparece no navegador
+
+Para utilizar o Expo é possível:
+-> Baixar expo no celular
+-> Emular um dispositivo no desktop
+-> Snack expo é semelhante a um CodePen, CodeSandbox, mas o foco é para aplicativo mobile.
+
+Documentação do expo: https://docs.expo.io/
+
+Documentação de navegação sugerida pelo expo:
+https://reactnavigation.org/docs/getting-started
+https://reactnavigation.org/docs/hello-react-navigation
+
+Para utilizar a navegação:
+-> npm install @react-navigation/native
+-> expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+Existem diversos tipos de navegação no React navigation: navegação por abas (tabs navigation) ou por drawer (hamburguer menu) ou stack (nao tem navegação por componente visual específico, é só navegação por botão, “empilha o histórico de navegação”)
+
+-> npm install @react-navigation/stack
+
+-> screenOptions={{ headerShown: false }} nao mostrar o cabeçario padrão
+
+-> Precisa ter sempre 3 tamanhos de imagens quando for colocar na aplicação, pois tem celulares com densidade maior (ex: iphone X tem 3x mais densidade, então quando falamos 400px é como 1200px nele)
+-> Mas só é preciso importar a imagem comum, o próprio React Native vai escolher a melhor imagem (logo.png, logo@2x.png ou logo@3x.png)
+
+-> expo install expo-constants valores constantes para serem utilizados, exemplo: altura da status bar
+
+Enviar e-mail:
+-> expo install expo-mail-composer
+-> https://docs.expo.io/versions/latest/sdk/mail-composer/
+
+-> DeepLinking é como um link https://whatsapp.com, com parâmetros específicos que pode ser chamado dentro do app para outros apps
