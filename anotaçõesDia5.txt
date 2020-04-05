@@ -1,0 +1,83 @@
+Celebrate
+-> npm install celebrate
+-> Realizar validações de dados recebidos na API antes de chegarem no controller
+-> Faz isso através de um middleware( routes.post('/ongs', celebrate(“validações”), OngController.create) )
+-> Sem a necessidade de validar a existência ou valor dos dados no controller
+-> Pode ser usado em qualquer dado vindo do usuário (através do body, params, query ou headers)
+
+-> O Celebrate usa o Joi, ele que faz a validação na verdade, o celebrate integra o Joi com o express, possibilitando dele ser usado como um middleware.
+-> https://hapi.dev/module/joi/
+
+Normalmente, se não passar pelo middleware de verificação, ele retorna um erro 500 para o cliente.
+Para evitar isso é utilizado o errors, além de retornar status 500, ele especifica melhor quais campos não passaram na validação com um erro 400 (Bad Request).
+-> const { errors } = require('celebrate');
+-> app.use(errors())
+
+Para validar os headers:
+-> É preciso colocar a validação dentro do object({})
+-> Não colocar as keys()
+-> É preciso colocar unknow(), pra ele não tentar validar os outros headers que vem e fazem parte da comunicação e não precisam ser validados.
+
+-------------------------------------///-------------------------------------
+Testes
+Há duas formas de testas
+-> Criar todo o código e depois incluir os testes.
+-> Criar o teste antes e depois desenvolver a aplicação (já pensar nas regras de negócio na hora de criar os testes, isso auxilia no caminho a ser tomado durante o desenvolvimento). 
+-> Então primeiro se faz os testes para ver se as regras de negócio estão sendo validadas, de cara ele vai mostrar que não estão, assim isso serve de guia para desenvolver até que todas as regras sejam cumpridas.
+-> TDD (Test-Driven Development) ou desenvolvimento dirigido a testes. Segundo essa técnica, fazemos os testes antes mesmo de terminar o desenvolvimento das funcionalidades.
+
+-> Teste unitário: Testa um pedaço muito isolado do código, alguma função específica. Exemplo: testar uma função de gerar um id aleatório. Essa função não está relacionada a API, BD, nem acessa outras ferramentas. Sem efeitos colaterais.
+-> Testes de integração: Testam o fluxo inteiro de uma funcionalidade (rota). Exemplo: criar um usuário.
+-> Para os testes, é recomendado criar um banco de dados especificado apenas de testes, para não ser influenciado pelo banco e nem atrapalhar.
+
+-------------------------------------///-------------------------------------
+Usando JEST para os testes
+-> npm install jest -D (dependência de dev)
+-> npx jest --init
+-> https://jestjs.io/docs/en/api
+
+Para testar chamadas de API internas, usar o supertest.
+-> npm install supertest -D (dependência de dev)
+-> O axios não é recomendado para fazer esse tipo de chamada, pois ele é focado na chamadas feitas pelo front e não para testes.
+-> Mandar o header de autorização no test
+    .post('/ongs')
+        .set('Authorization', 'asd')
+        .send({})
+
+-------------------------------------///-------------------------------------
+Usando variáveis de ambiente
+-> npm install cross-env
+-> https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
+
+-------------------------------------///-------------------------------------
+Deploy aplicações Node e React no Heroku
+-> https://www.youtube.com/watch?v=-j7vLmBMsEU
+
+-------------------------------------///-------------------------------------
+Deploy aplicação Node, configurando domínio, https no Digital Ocean.
+-> https://www.youtube.com/watch?v=ICIz5dE3Xfg
+
+-------------------------------------///-------------------------------------
+Quando a aplicação cresce ainda mais, é bom ter alguém específico de DevOps
+-> Serviços que podem ser usados para aplicações de grande escala:
+AWS, Azure ou Google Cloud Platform
+
+-------------------------------------///-------------------------------------
+Netlify
+-> Deploy de aplicações front-end, ou seja, aplicações do tipo SPA.
+
+-------------------------------------///-------------------------------------
+Gerando apk no Expo
+-> https://www.youtube.com/watch?v=wYMvzbfBdYI
+
+-------------------------------------///-------------------------------------
+Style guides Javascript com ESLint, Prettier 
+https://www.youtube.com/watch?v=TI4v4Y8yRjw
+
+-------------------------------------///-------------------------------------
+Autenticação JWT (Json Web Token)
+https://www.youtube.com/watch?v=KKTX1l3sZGk
+
+Estudar:
+-> ESLint, Prettier 
+-> Styled Component pra React e React Native
