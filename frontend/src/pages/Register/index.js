@@ -40,7 +40,7 @@ export default function Register() {
   return (
     <div className="register-container">
       <div className="content">
-        <section>
+        <section className="section-content">
           <img src={logoImg} alt="Be The Hero" />
 
           <h1>Cadastro</h1>

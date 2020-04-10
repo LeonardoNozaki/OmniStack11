@@ -41,7 +41,7 @@ export default function NewIncident() {
   return (
     <div className="new-incident-container">
       <div className="content">
-        <section>
+        <section className="section-new-incident">
           <img src={logoImg} alt="Be The Hero" />
 
           <h1>Cadastrar novo caso</h1>

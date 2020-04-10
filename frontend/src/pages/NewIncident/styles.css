@@ -1,22 +1,28 @@
 .new-incident-container {
-    width: 100%;
+    width: 100vw;
     max-width: 1120px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 50px;
+}
+
+.section-new-incident {
+    padding: 20px;
+    margin-top: 30px;
 }
 
 .new-incident-container .content {
-    width: 100%;
-    padding: 96px;
+    width: 95vw;
+    padding: 80px;
     background: #f0f0f5;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .new-incident-container .content section {
