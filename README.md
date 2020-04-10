@@ -6,6 +6,11 @@
   🚀 Semana Omnistack 11.0
 </h2>
 
+## :link: Acesso
+O Front-end e o Back-end dessa aplicação foram hospedados no [Heroku](https://www.heroku.com/). Desse modo, você pode acessar e interagir com esse projeto de forma online, como uma aplicação real da web.
+
+#### Link de acesso: https://bethehero-front.herokuapp.com/
+
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
